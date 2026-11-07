@@ -12,10 +12,10 @@ class Config:
     log_dir: Path = Path("logs")
 
     # Классы (порядок важен — соответствует индексам 0..3)
-    class_names: tuple = ("glioma", "meningioma", "notumor", "pituitary")
-    num_classes: int = 4
-    # Индексы классов, которые считаются "опухоль" — для расчёта recall_tumor
-    tumor_class_indices: tuple = (0, 1, 3)  # всё кроме notumor (idx=2)
+    # В файле config.py для задачи определения среза:
+    class_names: tuple = ("axial", "coronal", "sagittal")
+    num_classes: int = 3
+    tumor_class_indices: tuple = (0, 1, 2)
 
     # Изображения
     img_size: int = 224
